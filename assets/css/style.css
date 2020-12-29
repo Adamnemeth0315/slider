@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Langar&display=swap');
+
+@font-face{
+    font-family: "Langar";
+    src: url('https://fonts.googleapis.com/css2?family=Langar&display=swap');
+}
+
 * {
     box-sizing: border-box;
 }
@@ -34,6 +41,16 @@ img {
     width: 100%;
 }
 
+.tittle__div {
+    display: flex;
+    justify-content: center;
+}
+
+.tittle {
+    font-family: "Langar";
+    font-size: 1.2rem;
+    font-weight: 600;
+}
 
 .controllers {
     display: flex;
@@ -46,15 +63,34 @@ img {
 .slider__button--left {
     justify-content: start;
     text-align: center;
+    font-size: 1.3rem;
+}
+
+.slider__button--left i:active{
+    font-size: 1rem;
+}
+
+.slider__button--left i:hover{
+    cursor: pointer;
 }
 
 .slider__button--right {
     justify-content: end;
     text-align: center;
+    font-size: 1.3rem;
 }
 
+.slider__button--right i:active{
+    font-size: 1rem;
+}
+
+.slider__button--right i:hover{
+    cursor: pointer;
+}
+
+
 .slider__dots {
-    display: flex;
+    text-align: center;
     justify-content: center;
     margin-top: 10px;
     padding: 0.5rem;
@@ -62,4 +98,12 @@ img {
 
 .slider__dots i {
     padding: .5rem;
+}
+
+.slider__dots i:active {
+    font-size: .7rem;
+}
+
+.slider__dots i:hover{
+    cursor: pointer;
 }
