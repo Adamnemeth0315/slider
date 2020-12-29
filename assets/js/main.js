@@ -20,22 +20,26 @@ const slidePictureFunction = () => {
 const nextPictureFUnction = () => {
     currentSlide = currentSlide >= slides -1 ? 0 : currentSlide + 1;
     slidePictureFunction();
-    showTittle();
+    showTittle(currentSlide);
 }
 
 const previousPictureFUnction = () => {
     currentSlide = currentSlide <= 0 ? slides -1 : currentSlide -1;
     slidePictureFunction();
-    showTittle();
+    showTittle(currentSlide);
 }
 
-const imageSelect = () => dots.forEach((element, index) => element.addEventListener('click', () => container.style.transform = `translateX(-${index * slideSize}px)`));
+const imageSelect = () => dots.forEach((element, index) => element.addEventListener('click', () =>{
+    container.style.transform = `translateX(-${index * slideSize}px)`;
+    showTittle(index);
+}
+ ));
 
 
 
 
 //Ez így nem oké még. 
-  const showTittle = () => {
+  const showTittle = (counter) => {
     let images = {
         0 : 'Trees',
         1 : 'Lake',
@@ -44,7 +48,7 @@ const imageSelect = () => dots.forEach((element, index) => element.addEventListe
         4 : 'North',
     };
 
-    tittle.textContent = images[currentSlide];
+    tittle.textContent = images[counter];
 };  
 
 
