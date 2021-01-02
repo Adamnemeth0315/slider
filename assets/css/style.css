@@ -28,6 +28,7 @@ html {
     justify-content: center;
     flex-direction: column;
     overflow: hidden;
+    position: relative;
 }
 
 .body__image--container {
@@ -41,16 +42,23 @@ img {
     width: 100%;
 }
 
-.counter {
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: rgb(35, 32, 212);
+ 
+.counter__div {
+    position: absolute;
+    top: 70px;
+    left: 20px;
 }
 
-.image--counter{
-    font-size: 1.1rem;
+
+.image--counter, .counter{
+    font-size: 1.4rem;
     font-weight: 600;
-    color: rgb(35, 32, 212);
+    color: #FFF;
+}
+
+.image--counter:hover, .counter:hover {
+    cursor: pointer;
+    color: #BBB;
 }
 
 .tittle__div {
@@ -65,17 +73,16 @@ img {
 }
 
 .controllers {
+    color: #FFF;
+    font-size :2rem;
     display: flex;
     max-width: 98vw;
-    min-height: 70vh;
     justify-content: space-between;
     text-align: center;
 }
 
 .slider__button--left {
-    justify-content: start;
-    text-align: center;
-    font-size: 1.3rem;
+  left: 20px;
 }
 
 .slider__button--left i:active{
@@ -84,12 +91,11 @@ img {
 
 .slider__button--left i:hover{
     cursor: pointer;
+    left: 10px
 }
 
 .slider__button--right {
-    justify-content: end;
-    text-align: center;
-    font-size: 1.3rem;
+    right: 20px;
 }
 
 .slider__button--right i:active{
@@ -98,14 +104,29 @@ img {
 
 .slider__button--right i:hover{
     cursor: pointer;
+    right: 10px;
 }
 
+.slider__button--left, .slider__button--right {
+    width: 20px;
+    display: inline-block;
+    opacity: .75;
+    transform: translateY(-50%);
+    top: 50%;
+    position: absolute;
+    transition: all .3s ease;
+
+}
 
 .slider__dots {
-    text-align: center;
+    position: absolute;
+    display: flex;
+    bottom: 60px;
+    right: 330px;
     justify-content: center;
     margin-top: 10px;
     padding: 0.5rem;
+    color: #FFF;
 }
 
 .slider__dots i {
@@ -114,8 +135,10 @@ img {
 
 .slider__dots i:active {
     font-size: .7rem;
+    color: #AAA;
 }
 
 .slider__dots i:hover{
     cursor: pointer;
+    color: #CCC;
 }
