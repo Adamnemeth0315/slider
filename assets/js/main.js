@@ -6,6 +6,7 @@ const arrowRight = document.querySelector('.slider__button--right');
 const dots = document.querySelectorAll('.fa-circle');
 const tittle = document.querySelector('.tittle');
 const images = document.querySelectorAll('img');
+const imageCounter = document.querySelector('.image--counter');
 let currentSlide = 0;
 const slideSize = 800;
 
@@ -36,9 +37,6 @@ const imageSelect = () => dots.forEach((element, index) => element.addEventListe
  ));
 
 
-
-
-//Ez így nem oké még. 
   const showTittle = (counter) => {
     let images = {
         0 : 'Trees',
@@ -49,8 +47,8 @@ const imageSelect = () => dots.forEach((element, index) => element.addEventListe
     };
 
     tittle.textContent = images[counter];
+    imageCounter.textContent = currentSlide + 1;
 };  
-
 
 
 imageSelect();
