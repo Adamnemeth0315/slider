@@ -36,6 +36,9 @@ const imageSelect = () => dots.forEach((element, index) => element.addEventListe
 }
  ));
 
+  const imageCounterFunction = (counter) => {
+    imageCounter.textContent = counter + 1;
+ } 
 
   const showTittle = (counter) => {
     let images = {
@@ -47,10 +50,11 @@ const imageSelect = () => dots.forEach((element, index) => element.addEventListe
     };
 
     tittle.textContent = images[counter];
-    imageCounter.textContent = currentSlide + 1;
+    imageCounterFunction(counter);
 };  
 
-
+imageCounterFunction(currentSlide);
+showTittle(currentSlide);
 imageSelect();
 arrowLeft.addEventListener('click', previousPictureFUnction);
 arrowRight.addEventListener('click', nextPictureFUnction); 
